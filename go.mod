@@ -1,3 +1,3 @@
-module alxtr/jwt
+module github.com/alxtr/jwt
 
-go 1.25.6
+go 1.26
