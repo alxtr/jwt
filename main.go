@@ -22,19 +22,20 @@ func main() {
 		return
 	}
 
-	fmt.Println("--- HEADER ---")
 	if header, err := decode(parts[0]); err != nil {
-		fmt.Printf("Invalid header (%s)\n", err)
+		fmt.Printf("[invalid header] (%s)\n", err)
 	} else {
 		fmt.Println(header)
 	}
-
-	fmt.Println("--- PAYLOAD ---")
+	fmt.Println(".")
 	if payload, err := decode(parts[1]); err != nil {
-		fmt.Printf("Invalid payload (%s)\n", err)
+		fmt.Printf("[invalid payload] (%s)\n", err)
 	} else {
 		fmt.Println(payload)
 	}
+	fmt.Println(".")
+	fmt.Println(parts[2])
+
 }
 
 func decode(encodedJson string) (string, error) {
